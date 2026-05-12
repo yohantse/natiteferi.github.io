@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nati Teferi | Founder & ArifGet CEO</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      background:
+      linear-gradient(rgba(15,23,42,0.88), rgba(15,23,42,0.9)),
+      url('YOUR_IMAGE_HERE.jpg') center/cover no-repeat;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 400px;
+      gap:60px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:72px;
+      line-height:1;
+      margin-bottom:20px;
+      font-weight:800;
+    }
+
+    .hero-text h2{
+      color:#38bdf8;
+      font-size:22px;
+      font-weight:500;
+      margin-bottom:30px;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      max-width:650px;
+      font-size:18px;
+      margin-bottom:35px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 28px;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.3s ease;
+    }
+
+    .btn-primary{
+      background:#38bdf8;
+      color:#0f172a;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,0.2);
+      color:white;
+    }
+
+    .hero-image{
+      position:relative;
+    }
+
+    .hero-image img{
+      width:100%;
+      border-radius:30px;
+      object-fit:cover;
+      border:4px solid rgba(255,255,255,0.08);
+      box-shadow:0 30px 80px rgba(0,0,0,0.4);
+    }
+
+    section{
+      padding:110px 0;
+    }
+
+    .section-title{
+      font-size:42px;
+      margin-bottom:16px;
+      font-weight:800;
+      text-align:center;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:#94a3b8;
+      max-width:700px;
+      margin:0 auto 70px auto;
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:28px;
+    }
+
+    .project-card{
+      background:#111c34;
+      border:1px solid rgba(255,255,255,0.05);
+      border-radius:24px;
+      padding:32px;
+      transition:0.3s ease;
+    }
+
+    .project-card:hover{
+      transform:translateY(-6px);
+      border-color:#38bdf8;
+    }
+
+    .project-card h3{
+      margin-bottom:16px;
+      font-size:24px;
+    }
+
+    .project-card p{
+      color:#cbd5e1;
+      font-size:15px;
+    }
+
+    .testimonial-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:24px;
+    }
+
+    .testimonial{
+      background:#111c34;
+      padding:30px;
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    .testimonial p{
+      color:#dbe4f0;
+      margin-bottom:24px;
+    }
+
+    .testimonial h4{
+      color:#38bdf8;
+      margin-bottom:4px;
+    }
+
+    footer{
+      background:#07101f;
+      padding:70px 0 30px;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-content{
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:40px;
+      margin-bottom:50px;
+    }
+
+    .footer-brand h3{
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .footer-brand p{
+      color:#94a3b8;
+      max-width:420px;
+    }
+
+    .footer-contact h4{
+      margin-bottom:18px;
+    }
+
+    .footer-contact p{
+      color:#cbd5e1;
+      margin-bottom:10px;
+    }
+
+    .copyright{
+      text-align:center;
+      color:#64748b;
+      border-top:1px solid rgba(255,255,255,0.06);
+      padding-top:24px;
+      font-size:14px;
+    }
+
+    @media(max-width:950px){
+
+      .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .hero-text p{
+        margin:auto auto 35px auto;
+      }
+
+      .hero-buttons{
+        justify-content:center;
+      }
+
+      .hero-text h1{
+        font-size:52px;
+      }
+
+      .hero-image{
+        max-width:450px;
+        margin:auto;
+      }
+
+    }
+
+    @media(max-width:600px){
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title{
+        font-size:34px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container hero">
+
+    <div class="hero-text">
+      <h1>Nati Teferi</h1>
+
+      <h2>
+        Founder, Influencer & ArifGet CEO
+      </h2>
+
+      <p>
+        Ethiopian entrepreneur, digital creator, and ecosystem builder focused on freelancing,
+        remote work, creator education, and empowering African youth through technology
+        and internet-based opportunities.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">Explore Works</a>
+        <a href="#contact" class="btn btn-secondary">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="nati-teferi.jpg" alt="Nati Teferi">
+    </div>
+
+  </div>
+</header>
+
+<section id="projects">
+  <div class="container">
+
+    <h2 class="section-title">Projects & Works</h2>
+
+    <p class="section-subtitle">
+      Building digital opportunities, educating freelancers, and expanding Ethiopia’s creator economy through platforms, workshops, and media presence.
+    </p>
+
+    <div class="projects">
+
+      <div class="project-card">
+        <h3>ArifGet</h3>
+        <p>
+          Founder and CEO of ArifGet, a platform focused on freelancing,
+          digital skills, remote work education, and empowering young Africans
+          to succeed in the internet economy.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>National Workshops</h3>
+        <p>
+          Conducted workshops and educational programs with institutions including
+          Addis Ababa University, ALX Ethiopia, schools, and public organizations.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Creator & Influencer</h3>
+        <p>
+          Built one of Ethiopia’s strongest online communities around freelancing,
+          AI tools, content creation, online income, and digital entrepreneurship.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Media Presence</h3>
+        <p>
+          Featured across major media and platforms including BBC Amharic,
+          EBS TV, Abay TV, and other digital communities discussing online work
+          and youth empowerment.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="container">
+
+    <h2 class="section-title">Testimonials</h2>
+
+    <p class="section-subtitle">
+      Experiences shared by students, institutions, and communities impacted through workshops and mentorship.
+    </p>
+
+    <div class="testimonial-grid">
+
+      <div class="testimonial">
+        <p>
+          “Nati Teferi’s presentation opened our students’ minds to the possibilities
+          of online work and freelancing in today’s digital economy.”
+        </p>
+
+        <h4>Addis Ababa University</h4>
+        <span>Workshop Participant</span>
+      </div>
+
+      <div class="testimonial">
+        <p>
+          “The session was practical, inspiring, and highly engaging. Students gained
+          real insight into freelancing, Upwork, and digital opportunities.”
+        </p>
+
+        <h4>ALX Ethiopia</h4>
+        <span>Collaboration Event</span>
+      </div>
+
+      <div class="testimonial">
+        <p>
+          “His ability to explain global internet opportunities in a locally relatable
+          way makes his work impactful for Ethiopian youth.”
+        </p>
+
+        <h4>Community Member</h4>
+        <span>ArifGet Audience</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        <h3>Nati Teferi</h3>
+
+        <p>
+          Founder, influencer, entrepreneur, and CEO of ArifGet focused on empowering
+          the next generation through freelancing, technology, and digital education.
+        </p>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+
+        <p>Email: natiteferi89@gmail.com</p>
+        <p>Location: Addis Ababa, Ethiopia</p>
+        <p>LinkedIn: linkedin.com/in/natiteferi</p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Nati Teferi. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
