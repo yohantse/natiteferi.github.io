@@ -61,7 +61,38 @@
     .nav-cta:hover { background:var(--cdim); border-color:var(--cyan); }
 
     /* ── HERO ── */
-    .hero { min-height:100vh; display:flex; align-items:center; padding:110px 60px 60px; position:relative; overflow:hidden; gap:60px; }
+    .hero {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:110px 60px 60px;
+  position:relative;
+  overflow:hidden;
+  gap:120px;
+}
+
+.hero-content {
+  position:relative;
+  z-index:5;
+  flex:1;
+  max-width:760px;
+}
+
+.hero-img-wrap {
+  position:relative;
+  z-index:1;
+  flex-shrink:0;
+  margin-left:20px;
+}
+
+.hero-img-wrap img {
+  display:block;
+  width:min(280px,75vw);
+  aspect-ratio:3/4;
+  object-fit:cover;
+  filter:saturate(.65) contrast(1.1) brightness(.85);
+}
 
     .badge { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--cborder); background:var(--cdim); padding:6px 16px; font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; color:var(--cyan); margin-bottom:28px; }
     .badge-dot { width:6px; height:6px; background:var(--cyan); border-radius:50%; animation:blink 1.8s ease-in-out infinite; }
@@ -182,7 +213,7 @@
 
 <!-- ── HERO ── -->
 <section class="hero">
-  <div style="position:relative;z-index:1;flex:1;max-width:680px;">
+  <div class="hero-content">
 
     <div class="badge">
       <span class="badge-dot"></span>
@@ -191,7 +222,12 @@
 
     <h1 class="hero-h1">
       <span class="line"><span class="inner" id="h1a">Tech</span></span>
-      <span class="line"><span class="inner" id="h1b" style="color:var(--cyan)">Founder.</span></span>
+      <span class="line">
+  <span class="inner" id="h1b"
+        style="color:var(--cyan);padding-right:30px;display:inline-block;">
+    Founder.
+  </span>
+</span>
       <span class="line"><span class="inner" id="h1c">Ecosystem</span></span>
       <span class="line"><span class="inner" id="h1d">Builder.</span></span>
     </h1>
@@ -210,7 +246,7 @@
     </div>
   </div>
 
-  <div class="hero-img-wrap" style="position:relative;z-index:1;" id="himg">
+ <div class="hero-img-wrap" id="himg">
     <div class="corner tl"></div><div class="corner tr"></div>
     <div class="corner bl"></div><div class="corner br"></div>
     <img src="http://natiteferi.com/IMG_20260516_184402_771.jpg" alt="Nati Teferi"
